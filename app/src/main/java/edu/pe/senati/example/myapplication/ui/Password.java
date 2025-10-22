@@ -14,11 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.pe.senati.example.myapplication.R;
-import edu.pe.senati.example.myapplication.databinding.FragmentPedidoPersonalizadoBinding;
-import edu.pe.senati.example.myapplication.databinding.FragmentVerificarBinding;
+import edu.pe.senati.example.myapplication.databinding.FragmentPasswordBinding;
 
-public class Verificar extends Fragment {
-    FragmentVerificarBinding binding;
+
+public class Password extends Fragment {
+    FragmentPasswordBinding binding;
     View view;
     Context context;
     NavController navController;
@@ -32,7 +32,7 @@ public class Verificar extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentVerificarBinding.inflate(inflater, container,false);
+        binding = FragmentPasswordBinding.inflate(inflater, container,false);
         return view = binding.getRoot();
     }
     @Override

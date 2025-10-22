@@ -3,12 +3,248 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Registrar">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="120dp"
+        android:background="@drawable/sh_bg_header_police_blue"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="36dp"
+        android:text="@string/vamos_a_registrarnos"
+        android:textColor="@color/flesh"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btnLogin"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:text="@string/iniciar_sesion"
+                android:textAllCaps="false"
+                android:textColor="@color/Gunmetal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btnRegistrar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:translationZ="5dp"
+                android:layout_marginStart="-32dp"
+                android:background="@drawable/sh_bg_btn_carmine_pink"
+                android:text="@string/registrate"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtImputLayout"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:paddingHorizontal="16dp"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:hint="@string/nombre_de_usuario"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtEmailImputLayout"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:paddingHorizontal="16dp"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:hint="@string/correo"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passImputLayout"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:paddingHorizontal="16dp"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:hint="@string/contraseña"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passConImputLayout"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:paddingHorizontal="16dp"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:hint="@string/confirmar_password"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAllCaps="false"
+            android:background="@drawable/sh_bg_btn_gunmetal"
+            android:text="@string/registrarse"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="start|center"
+                android:background="@color/Carmine_Pink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/inicia_sesi_n_con"
+                android:textColor="@color/Gunmetal"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="end|center"
+                android:background="@color/Carmine_Pink"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="108dp"
+                android:layout_height="72dp"
+                android:padding="8dp"
+                android:background="@drawable/sh_bg_fnd_icon"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_facebook"
+                app:tint="@color/Police_Blue" />
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="108dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/sh_bg_fnd_icon"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_googleplus"
+                app:tint="@color/Carmine_Pink" />
+
+            <ImageView
+                android:id="@+id/ivApple"
+                android:layout_width="108dp"
+                android:layout_height="72dp"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                android:background="@drawable/sh_bg_fnd_icon"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_apple" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center|bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tienes_una_cuenta"
+            android:textColor="@color/Gunmetal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/inicia_sesion"
+            android:textColor="@color/Carmine_Pink"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </FrameLayout>
